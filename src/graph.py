@@ -38,6 +38,8 @@ def bfs_traversal(G: nx.Graph, start: int) -> list[int]:
                 if neighbor not in visited:
                     queue.append(neighbor)
 
+    return traversal
+
 def find_shortest_path(G: nx.Graph, source: int, target: int) -> list[int]:
     try:
         path = nx.shortest_path(G, source=source, target=target, method='dijkstra')
